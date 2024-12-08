@@ -20,6 +20,8 @@ end)
 
 local function findNearestPlayer()
 	local closestDistance = 512
+	local closestPlayer = nil
+
 	for _, player in ipairs(Players:GetPlayers()) do
 		if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
 			local targetRoot = player.Character.HumanoidRootPart
@@ -28,13 +30,13 @@ local function findNearestPlayer()
 			if localRoot then
 				local distance = (localRoot.Position - targetRoot.Position).Magnitude
 				if distance < closestDistance then
-					print(player, distance)
-					return player
+					closestDistance = distance
+					closestPlayer = player
 				end
 			end
 		end
 	end
-	return nil
+	return closestPlayer
 end
 
 game:GetService("RunService").PreRender:Connect(function()
