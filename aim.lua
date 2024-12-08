@@ -6,7 +6,8 @@ local Camera = workspace.CurrentCamera
 aimbotActive = false
 aimbotActivateKey = Enum.KeyCode.Home
 
-function changeAimbotActivateKey(key)
+function Main(key)
+	if not key then return end
 	aimbotActivateKey = key
 	print(aimbotActivateKey)
 end
@@ -50,3 +51,4 @@ game:GetService("RunService").PreRender:Connect(function()
 		end
 	end
 end)
+return Main
