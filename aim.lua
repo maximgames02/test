@@ -6,7 +6,7 @@ local Camera = workspace.CurrentCamera
 aimbotActive = false
 aimbotActivateKey = Enum.KeyCode.Home
 
-local function changeAimbotActivateKey(key)
+function changeAimbotActivateKey(key)
 	aimbotActivateKey = key
 	print(aimbotActivateKey)
 end
