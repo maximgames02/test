@@ -19,7 +19,7 @@ UserInputService.InputBegan:Connect(function(input)
 end)
 
 local function findNearestPlayer()
-	local closestDistance = math.huge
+	local closestDistance = 512
 	for _, player in ipairs(Players:GetPlayers()) do
 		if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
 			local targetRoot = player.Character.HumanoidRootPart
