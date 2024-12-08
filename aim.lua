@@ -27,7 +27,10 @@ local function findNearestPlayer()
 
 			if localRoot then
 				local distance = (localRoot.Position - targetRoot.Position).Magnitude
-				if distance < closestDistance then return player end
+				if distance < closestDistance then
+					print(player, distance)
+					return player
+				end
 			end
 		end
 	end
