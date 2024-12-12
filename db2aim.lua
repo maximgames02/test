@@ -58,7 +58,7 @@ game:GetService("RunService").PreRender:Connect(function()
 		end)
 		if success and result then
 			local nearestPlayer = result
-			local target = nearestPlayer.Character:FindFirstChild("Head")
+			local target = nearestPlayer.Character:FindFirstChild("HumanoidRootPart")
 			if not target then return end
 			local cameraPosition = Camera.CFrame.Position
 			local targetPosition = target.Position
