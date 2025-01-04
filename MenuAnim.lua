@@ -16,6 +16,7 @@ local function PlayAnim(dummy, animId)
 end
 
 function Main(animId)
+	if not animId then return end
 	for _, dummy in ipairs(workspace.MainMenuDummies:GetChildren()) do
 		PlayAnim(dummy, animId)
 	end
