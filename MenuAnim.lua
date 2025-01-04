@@ -1,10 +1,6 @@
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-
 function Main(animId)
 	for _, dummy in ipairs(workspace.MainMenuDummies:GetChildren()) do
-		local Humanoid = Character:WaitForChild("Humanoid")
-		local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+		local Humanoid = dummy:WaitForChild("Humanoid")
 
 		local animation = Instance.new("Animation")
 		animation.AnimationId = `rbxassetid://{animId}`
